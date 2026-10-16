@@ -1,0 +1,8 @@
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('nav');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const dialog=document.getElementById('media-dialog'),content=document.getElementById('dialog-content'),caption=document.getElementById('dialog-caption');
+document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',()=>{const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+b.dataset.video+'?autoplay=1&rel=0';iframe.title=b.dataset.title;iframe.allow='autoplay; encrypted-media; picture-in-picture';iframe.allowFullscreen=true;content.replaceChildren(iframe);caption.textContent=b.dataset.title;dialog.showModal()}));
+document.querySelectorAll('[data-image]').forEach(b=>b.addEventListener('click',()=>{const img=document.createElement('img');img.src=b.dataset.image;img.alt=b.dataset.caption;content.replaceChildren(img);caption.textContent=b.dataset.caption;dialog.showModal()}));
+dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});dialog.addEventListener('close',()=>content.replaceChildren());
+document.getElementById('year').textContent=new Date().getFullYear();
