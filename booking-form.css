@@ -1,0 +1,18 @@
+/* Booking inquiries: red accents, clear labels, comfortable touch targets. */
+.booking-form{max-width:760px;margin:32px auto 20px;padding:30px;text-align:left;background:#100c0de8;border:1px solid #ffffff50;border-radius:4px;box-shadow:0 12px 40px #0003}
+.booking-form h3{font:400 30px Georgia,serif;margin:0 0 8px;color:#fff}
+.booking-form .form-intro{margin:0 0 22px;font:13px/1.6 Arial,sans-serif;color:#eee}
+.booking-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.booking-fields label{display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5;color:#fff}
+.booking-fields label span{font-size:12px;color:#d9d9d9}
+.booking-fields input,.booking-fields select,.booking-fields textarea{box-sizing:border-box;width:100%;min-width:0;min-height:48px;padding:12px;border:1px solid #ffffff70;border-radius:2px;background:#201b1d;color:#fff;font:16px/1.5 Arial,sans-serif;color-scheme:dark}
+.booking-fields input::placeholder{color:#bbb}
+.booking-fields textarea{resize:vertical}
+.booking-fields :is(input,select,textarea):focus-visible{outline:2px solid #ec3639;outline-offset:3px}
+.booking-fields .full-field{grid-column:1/-1}
+.booking-form .button{margin-top:24px;background:#ec3639;color:#fff;min-height:48px}
+.booking-form .button:disabled{opacity:.65;cursor:default;transform:none}
+.booking-form .form-status,.booking-form .form-note{font:14px/1.6 Arial,sans-serif;margin:14px 0 0;text-shadow:none!important;color:#fff}
+.booking-form .form-note{font-size:12px;color:#ddd}
+.form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:680px){.booking-form{padding:22px 18px;margin-top:26px}.booking-fields{grid-template-columns:minmax(0,1fr);gap:18px}.booking-form h3{font-size:26px}.booking-form .button{width:100%}}

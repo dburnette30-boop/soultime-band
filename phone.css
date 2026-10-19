@@ -39,3 +39,66 @@ dialog{width:calc(100vw - 24px);padding:58px 12px 16px;max-height:92svh}.dialog-
 }
 @media(max-width:360px){.hero .hero-copy{padding-left:20px;padding-right:20px}.hero .eyebrow{font-size:8px}.hero h1{font-size:42px}.section{padding-left:20px;padding-right:20px}.genre-strip{font-size:8px;gap:6px}.section-heading h2,.about-copy h2{font-size:40px}}
 @media(max-width:680px) and (orientation:landscape){.hero .hero-film{height:56.25vw}.member-grid{grid-template-columns:1fr 1fr}.member-grid details p{font-size:15px}}
+
+/* Dedicated phone layout, with all navigation visible on arrival. */
+@media(max-width:680px){
+ body{overflow-x:hidden}
+ body header{position:relative;height:auto;min-height:0;padding:16px 20px 12px;display:flex;flex-wrap:wrap;gap:16px;background:#111613}
+ body header .wordmark{margin:0 auto}
+ body header .header-logo{width:150px}
+ body header .menu-toggle{display:none}
+ body header nav,body header nav.open{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:static;inset:auto;width:100%;padding:0;gap:8px;max-height:none;overflow:visible;border:0;background:transparent}
+ body header nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 4px;font-size:14px;line-height:1.2;text-align:center;border:1px solid #ffffff30}
+ body header nav .nav-book{margin:0;padding:10px 4px!important;border-color:#ed454a88}
+ body header nav .nav-book span{display:none}
+ .hero{min-height:0;height:auto;max-height:none}
+ .hero .hero-film{inset:0 0 auto;height:auto;aspect-ratio:16/9;object-fit:contain}
+ .hero .hero-shade{top:0;height:56.25vw}
+ .hero .hero-copy{padding:calc(56.25vw + 24px) 24px 28px;text-align:left}
+ .hero h1{font-size:clamp(38px,10.5vw,56px)}
+ .hero .hero-logo{max-width:310px;margin:14px 0 0}
+ .hero .hero-description{font-size:16px;letter-spacing:.5px;margin-bottom:0}
+ .hero .hero-bottom{position:relative;inset:auto;margin:0 24px;padding:0 0 20px;gap:14px;flex-wrap:wrap}
+ .hero .hero-bottom>a{font-size:11px;letter-spacing:.6px}
+ .hero .hero-bottom button{margin-left:auto}
+ .members .member-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+ .members .member-grid img{aspect-ratio:4/3;object-fit:cover;object-position:center 24%}
+ .members .member-grid h3{font-size:28px;min-height:0}
+ .members .member-grid details p{font-size:18px;line-height:1.75}
+ .gallery-grid .soul-gallery-photo img{aspect-ratio:2/3;object-fit:contain}
+ .video-library{grid-template-columns:minmax(0,1fr)}
+ .video-card iframe,.video-card video{max-width:100%}
+ .booking .booking-actions{width:100%}
+ footer>.footer-tagline{display:block;font-size:16px;line-height:1.5}
+}
+
+/* Compact headline and red logo over the phone's opening video. */
+@media(max-width:680px){
+ .hero .hero-copy{padding:0 0 24px;width:100%;text-align:left}
+ .hero .hero-headline{position:absolute;top:0;right:0;width:60%;height:56.25vw;padding:10px 16px 10px 10px;display:flex;flex-direction:column;justify-content:center;text-align:right}
+ .hero .hero-headline .eyebrow{font-size:6px;line-height:1.4;letter-spacing:.6px;margin-bottom:9px}
+ .hero .hero-headline h1{font-size:clamp(23px,6.8vw,42px);line-height:1.04;letter-spacing:-.6px;text-shadow:0 2px 12px #0009}
+ .hero .hero-headline .hero-logo{width:100%;max-width:250px;height:auto;margin:8px 0 0 auto}
+ .hero .hero-description{padding:calc(56.25vw + 18px) 24px 0;margin:0;font-size:16px}
+ .hero .hero-shade{background:linear-gradient(270deg,#07100bd9,transparent 85%);height:56.25vw}
+}
+
+/* Lower the phone overlay to reveal the logo at the top of the bass drum. */
+@media(max-width:680px){.hero .hero-headline{justify-content:flex-end;padding-bottom:8px}}
+
+/* The Band already includes biographies; omit the duplicate phone link. */
+@media(max-width:680px){body header nav a.bios-nav{display:none}body header nav .nav-book{grid-column:span 2}}
+
+/* Match the booking outline to the other phone navigation links. */
+@media(max-width:680px){body header nav .nav-book{border:1px solid #ffffff30}}
+
+/* Keep supporting copy safely below the full video and closing logo. */
+@media(max-width:680px){.hero .hero-description{padding-top:calc(56.25vw + 90px)}}
+
+@media(max-width:680px){body header nav a.nav-book{border:1px solid #ffffff30}}
+
+/* Give supporting copy its own space below the phone video and above the red strip. */
+@media(max-width:680px){
+ .hero .hero-copy{min-height:0;padding:56.25vw 0 0}
+ .hero .hero-description{position:relative;inset:auto;margin:0;padding:24px 18px 20px;transform:none;font-size:14px;line-height:1.5;text-align:center;letter-spacing:.2px;text-shadow:0 1px 5px #000}
+}

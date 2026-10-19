@@ -20,8 +20,8 @@
 
 .hero-still{object-position:right top;pointer-events:none}.hero-still[hidden]{display:none}
 
-/* Dissolve into the bass-drum logo once the complete film has ended. */
-.hero-still{opacity:0;transition:opacity 1.6s ease;will-change:opacity}.hero-still.is-visible{opacity:1}
+/* Hold the opening frame after one complete video play. */
+.hero-still{opacity:0;transition:none}.hero-still.is-visible{opacity:1}
 
 /* A steady turntable spin, shared by desktop and phone layouts. */
 @keyframes record-spin{from{transform:rotate(-15deg)}to{transform:rotate(345deg)}}
@@ -33,3 +33,328 @@
 
 /* Balance Pete’s full head with more of his body in the gallery crop. */
 .photo[data-image="assets/bass.avif"] img{object-position:center 25%}
+
+/* Red band artwork replaces the opening title and header wordmark. */
+.header-logo{width:150px;height:auto}
+.hero-logo{display:block;width:min(100%,480px);height:auto;margin:14px 0 0 auto}
+@media(max-width:1000px){.hero-logo{width:100%;max-width:430px}}
+@media(max-width:680px){.header-logo{width:125px}.hero-logo{width:100%;max-width:360px;margin-top:14px}}
+
+/* Give the band introduction a clear, larger heading. */
+.about-copy .meet-soultime{font-size:clamp(24px,2.8vw,38px);line-height:1.25;letter-spacing:1.5px;margin-bottom:26px}
+
+/* Match the larger band-introduction heading across screen sizes. */
+.members .section-heading .band-heading{font-size:clamp(28px,3.3vw,44px);line-height:1.25;letter-spacing:1.5px;margin-bottom:26px}
+
+.members .section-heading .band-heading em{font-family:inherit;font-weight:inherit;font-style:italic}
+
+.members .section-heading h2.band-heading{font-family:Georgia,serif;font-weight:400;font-style:italic;text-transform:none}
+
+/* Larger, readable names and instrument headings beneath band portraits. */
+.member-grid h3{font-size:28px;line-height:1.2;overflow-wrap:break-word}
+.member-grid .eyebrow{font-size:12px;letter-spacing:1.2px;line-height:1.5}
+@media(max-width:680px){.member-grid h3{font-size:23px;min-height:56px}.member-grid .eyebrow{font-size:10px;letter-spacing:.7px}}
+
+/* Taller biography strips with larger labels and clear tap targets. */
+.member-grid details{padding-top:0}
+.member-grid summary{font-size:16px;line-height:1.4;min-height:62px;padding:18px 0;align-items:center;gap:12px}
+.member-grid summary span{font-size:24px;line-height:1;flex-shrink:0}
+@media(max-width:680px){.member-grid summary{font-size:14px;min-height:60px;padding:17px 0;gap:8px}.member-grid summary span{font-size:22px}}
+
+/* Slightly larger biography strips; keep the first plus clearly visible. */
+.member-grid summary{font-size:18px;min-height:70px;padding:22px 0}
+.member-grid summary .strip-label{font-size:inherit;line-height:inherit;flex:1;min-width:0;white-space:normal}
+.member-grid summary span:not(.strip-label){font-size:27px;min-width:20px;text-align:center}
+@media(max-width:680px){.member-grid summary{font-size:16px;min-height:68px;padding:21px 0}.member-grid summary span:not(.strip-label){font-size:25px}}
+
+.member-grid summary.voice-strip{display:block;color:var(--cream);overflow:visible}
+
+/* Band artwork in the footer. */
+footer .footer-logo{width:180px;height:auto}
+@media(max-width:680px){footer .footer-logo{width:155px}}
+
+/* Readable caption beneath the Meet SoulTime band photo. */
+.about .image-note{font-size:18px;line-height:1.5;letter-spacing:1.8px;margin-top:20px}
+@media(max-width:680px){.about .image-note{font-size:16px;letter-spacing:1.2px}}
+
+/* Larger track-selection heading on the Videos page. */
+.videos-page .singles>.eyebrow{font-size:clamp(22px,2.3vw,30px);line-height:1.35;letter-spacing:1.5px;padding-right:24px}
+
+/* Match the red italic accent headings throughout the site. */
+.videos-page .section-heading .get-into-it{font-family:Georgia,serif;font-style:italic;font-weight:400;color:#b21f26}
+
+/* Use one deep saturated red for the requested Videos page headings. */
+.videos-page .singles>.eyebrow{color:#b21f26}
+
+/* Larger navigation links with room to fit tablet widths. */
+header nav a{font-size:17px;font-weight:500}
+@media(min-width:681px) and (max-width:1000px){header nav{gap:16px}header nav a{font-size:16px}header .nav-book{padding:13px 15px}header .nav-book span{margin-left:10px}}
+@media(max-width:680px){header nav a{font-size:18px;min-height:50px}header .menu-toggle{font-size:15px}}
+
+/* Larger scroll invitation on the opening screen. */
+.hero .hero-bottom>a{font-size:14px;line-height:1.4;font-weight:500;letter-spacing:1.2px}
+.hero .hero-bottom>a span{font-size:22px;margin-left:14px}
+@media(max-width:680px){.hero .hero-bottom>a{font-size:11px;letter-spacing:.8px}.hero .hero-bottom>a span{font-size:20px;margin-left:8px}.hero .hero-bottom{gap:12px}}
+
+/* Match the opening-screen musician line to the scroll invitation. */
+.hero .hero-bottom>span{font-size:14px;line-height:1.4;font-weight:500;letter-spacing:1.2px;text-align:right}
+
+/* Give the opening description the same clearer, stronger treatment. */
+.hero .hero-description{font-size:18px;line-height:1.7;font-weight:500;letter-spacing:1.2px;color:#d3d6cc}
+@media(max-width:680px){.hero .hero-description{font-size:16px;letter-spacing:.8px}}
+
+/* Match Meet SoulTime copy to the larger homepage description. */
+.about .about-copy p:not(.eyebrow){font-size:18px;line-height:1.7;font-weight:500;letter-spacing:1.2px;color:#d3d6cc}
+@media(max-width:680px){.about .about-copy p:not(.eyebrow){font-size:16px;letter-spacing:.8px}}
+
+/* Larger gallery introduction. */
+.gallery .section-heading>.gallery-intro{font-size:20px;line-height:1.5}
+@media(max-width:680px){.gallery .section-heading>.gallery-intro{font-size:18px}}
+
+/* Readable closing tagline on every screen. */
+footer>.footer-tagline{display:block;font-size:17px;line-height:1.5}
+@media(max-width:680px){footer>.footer-tagline{font-size:16px}}
+
+/* Larger introduction beside The Band heading. */
+.members .section-heading>.members-intro{font-size:20px;line-height:1.6}
+@media(max-width:680px){.members .section-heading>.members-intro{font-size:18px}}
+
+/* Larger biographies across all screen sizes. */
+.members .member-grid details p{font-size:18px;line-height:1.8}
+
+/* Preserve the full portrait framing from Soul Gallery. */
+.gallery-grid .soul-gallery-photo img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+
+/* A separate titled player for every performance video. */
+.video-library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 28px}
+.video-card{min-width:0}.video-card h3{font-size:22px;line-height:1.35;font-weight:500;margin:0 0 16px;color:#19211b}
+.video-player{aspect-ratio:16/9;background:#101512}.video-player iframe,.video-player video{display:block;width:100%;height:100%;border:0;object-fit:contain}
+.videos-page .video-library-heading{font-family:DM Sans,Arial,sans-serif;font-size:clamp(22px,2.3vw,30px);line-height:1.35;letter-spacing:1.5px;color:#b21f26;margin:56px 0 28px}
+.documentary-library{grid-template-columns:minmax(0,1fr);max-width:900px}
+@media(max-width:680px){.video-library{grid-template-columns:minmax(0,1fr);gap:32px}.video-card h3{font-size:20px}}
+
+/* Larger text throughout the video collection. */
+.videos-page .watch>.section-heading>p{font-size:20px;line-height:1.7}
+.videos-page .watch>.section-heading .eyebrow{font-size:16px;line-height:1.5}
+.videos-page .video-card h3{font-size:28px;line-height:1.35}
+.videos-page .video-library-heading{font-size:clamp(26px,2.8vw,36px)}
+@media(max-width:680px){.videos-page .watch>.section-heading>p{font-size:18px}.videos-page .watch>.section-heading .eyebrow{font-size:14px}.videos-page .video-card h3{font-size:24px}}
+
+/* Match the spinning-record section background on the Videos page. */
+.videos-page .watch{background:#202b23;color:var(--cream)}
+.videos-page .watch p{color:var(--muted)}
+.videos-page .video-card h3{color:var(--cream)}
+
+/* Large, direct gallery heading. */
+.gallery .section-heading .gallery-title{font-size:clamp(64px,7vw,100px);line-height:1.05}
+@media(max-width:680px){.gallery .section-heading .gallery-title{font-size:60px}}
+
+/* Match Gallery to the other red italic homepage headings. */
+.gallery .section-heading .gallery-title{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--gold)}
+
+/* Gallery starts at the top of the viewport, with no preceding section visible. */
+#gallery{scroll-margin-top:-100px}
+@media(max-width:680px){#gallery{scroll-margin-top:-24px}}
+
+/* Show uploaded gallery images in their complete original framing. */
+.gallery-grid .uploaded-gallery-photo{align-self:start;min-height:0}
+.gallery-grid .uploaded-gallery-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.gallery-grid .uploaded-gallery-photo span{position:static;display:block;padding:16px 18px;background:#19201b;line-height:1.5}
+
+/* Flow mixed photo sizes into packed columns with no empty grid cells. */
+.gallery .gallery-grid{display:block;column-count:3;column-gap:16px}
+.gallery .gallery-grid .photo{display:inline-block;vertical-align:top;break-inside:avoid;page-break-inside:avoid;width:100%;min-height:0;margin:0 0 16px;padding:0;grid-column:auto;overflow:hidden}
+.gallery .gallery-grid .photo img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.gallery .gallery-grid .photo span{position:static;display:block;padding:14px 16px;background:#19201b;line-height:1.5}
+@media(max-width:1000px){.gallery .gallery-grid{column-count:2}}
+@media(max-width:680px){.gallery .gallery-grid{column-count:1;column-gap:0}}
+
+/* Dedicated booking page opens directly on contact information. */
+.booking-page header{position:relative;background:var(--bg)}
+.booking-page .booking{min-height:75svh}
+.booking-page nav a[aria-current="page"]{color:var(--gold)}
+
+/* Larger invitation above the show calendar. */
+.shows .shows-intro{font-size:24px;line-height:1.4;letter-spacing:1.5px}
+@media(max-width:680px){.shows .shows-intro{font-size:21px;letter-spacing:1px}}
+
+/* Clear end to the show-dates section, with a Home control. */
+.shows{border-bottom:1px solid var(--line)}
+.shows-page-end{grid-column:1/-1;display:flex;justify-content:center;border-top:1px solid var(--line);padding-top:28px;margin-top:48px}
+.shows-home{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:68px;min-height:68px;color:var(--gold);font-size:15px}
+.shows-home:hover{color:var(--cream)}
+@media(max-width:680px){.shows-page-end{margin-top:36px;padding-top:24px}}
+
+/* SoulTime logo serves as the show-section Home button. */
+.shows-home .shows-home-logo{width:180px;height:auto}
+@media(max-width:680px){.shows-home .shows-home-logo{width:160px}}
+
+/* Biographies always accompany their portraits, without disclosure controls. */
+.member-grid .member-bio{border-top:1px solid var(--line)}
+.member-grid .bio-label{font:inherit;font-size:18px;font-weight:400;color:var(--muted);line-height:1.4;margin:0;padding:22px 0}
+.member-grid .member-bio p{font-size:18px;line-height:1.8;margin-top:0}
+@media(max-width:680px){.member-grid .bio-label{font-size:16px;padding:21px 0}.member-grid .member-bio p{line-height:1.75}}
+
+/* Balance the remaining band portraits across the desktop row. */
+@media(min-width:1001px){.members .member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Let the edited film's animated logo take over from the opening title. */
+.hero .hero-headline,.hero .hero-shade{transition:opacity .8s ease}
+.hero .hero-headline.is-faded,.hero .hero-shade.is-faded{opacity:0;pointer-events:none}
+.hero .hero-still{object-fit:contain;object-position:center;background:#000}
+@media(prefers-reduced-motion:reduce){.hero .hero-headline,.hero .hero-shade{transition:none}}
+
+/* More breathing room between the homepage logo and supporting copy. */
+@media(min-width:681px){.hero .hero-description{margin-top:128px}}
+
+/* The animated and frozen logos use exactly the same framing. */
+.hero video.hero-film.is-logo-phase{object-fit:contain;object-position:center;background:#000}
+
+/* Plain header booking link. */
+body header nav a.nav-book{border-color:transparent}
+
+/* Lower the opening lettering below the bass-drum wordmark. */
+.hero .hero-headline{transform:translateY(50px)}
+@media(max-width:680px){.hero .hero-headline{transform:translateY(-8px)}}
+
+/* Lower the supporting homepage copy. */
+.hero .hero-description{transform:translateY(110px)}
+
+
+/* Bring the band portraits closer to the introduction. */
+.about.section{padding-bottom:50px}
+.members.section{padding-top:50px}
+@media(max-width:680px){.about.section{padding-bottom:28px}.members.section{padding-top:28px}}
+
+/* Use the group portrait behind event inquiries, without the promotional footer. */
+.booking{background-image:linear-gradient(#111a1699,#111a16e6),url('assets/soultime-gallery-1402.jpeg');background-position:center,center 64px;background-size:cover,min(80%, 480px) auto;background-repeat:no-repeat;background-color:#211d1e}
+@media(max-width:680px){.booking{background-position:center,center 64px}}
+
+/* Show the full group portrait with room above every head. */
+.about .about-image img{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center top}
+
+/* Place the booking introduction above the graphic. */
+.booking{position:relative}
+.booking>.eyebrow{position:absolute;top:20px;left:16px;right:16px;margin:0;font-size:clamp(16px,2vw,22px);letter-spacing:1.5px;line-height:1.5}
+
+/* Bright booking details over the background artwork. */
+.booking p:not(.eyebrow){color:#fff}
+
+/* Reserve the full artwork height before the booking links. */
+/* Center the headline inside the artwork, with details and links beneath it. */
+.booking.section{--booking-art-size:min(80vw,480px);padding-top:64px}
+.booking-copy{min-height:0;padding-top:0}
+.booking .booking-copy h2{height:var(--booking-art-size);display:flex;align-items:center;justify-content:center;font-size:clamp(38px,8vw,72px);line-height:1.08;letter-spacing:-1.5px}
+.booking .booking-copy>p{margin:18px 0 0}
+.booking .booking-actions{margin:18px 0 4px}
+
+/* Softer red for the broad color bar and filled links. */
+.genre-strip,.button.gold{background:#ec3639;color:#fff}
+.button.gold{border-color:#ec3639}
+.button.gold:hover{background:#d62e31}
+
+/* Make the Facebook footer link easier to read and tap. */
+footer a[href*="facebook.com"]{font-size:20px;font-weight:500;line-height:1.4;min-height:44px;display:inline-flex;align-items:center}
+
+/* Dance-party atmosphere behind the Meet SoulTime introduction. */
+.home-page #about{background-image:linear-gradient(90deg,rgba(4,10,22,.26),rgba(4,10,22,.38)),url('assets/meet-soultime-party-bright.webp');background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}
+.home-page #about .about-copy p:not(.eyebrow),.home-page #about .image-note{color:#f3efdf;text-shadow:0 1px 5px #000}
+.home-page #about .about-copy h2{text-shadow:0 2px 12px #0009}
+@media(max-width:680px){.home-page #about{background-image:linear-gradient(rgba(4,10,22,.24),rgba(4,10,22,.36)),url('assets/meet-soultime-party-bright.webp');background-position:center}}
+
+/* Slightly larger white lettering on the show-calendar section. */
+#shows .shows-white-heading{font-size:1.1em}
+#shows>div>p:not(.eyebrow){font-size:18px;line-height:1.7}
+
+/* Shade the copy locally so the party background stays bright. */
+.home-page #about .about-copy{background:rgba(4,10,22,.80);padding:26px;border-radius:8px}
+.home-page #about .image-note{display:table;background:rgba(4,10,22,.80);padding:8px 12px}
+@media(max-width:680px){.home-page #about .about-copy{padding:22px 18px}}
+
+/* Vintage stage atmosphere behind Cherry and Vinny's biographies. */
+.home-page #members{background-color:#060d1b;background-image:linear-gradient(180deg,rgba(5,11,24,.20),rgba(5,11,24,.42) 65%,#060d1b),url('assets/band-stage-background.webp');background-position:center,center top;background-size:cover,100% var(--band-stage-height,auto);background-repeat:no-repeat;background-attachment:scroll}
+.home-page #members .members-intro,.home-page #members .bio-label,.home-page #members .member-bio p{color:#e6e7e5;text-shadow:0 1px 5px #000}
+.home-page #members h3{text-shadow:0 2px 8px #000}
+
+/* Feather portrait edges into the stage without blurring faces. */
+.home-page #members .member-grid>article>img{
+ border-radius:18px;
+ -webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 94%,transparent);
+ -webkit-mask-composite:source-in;
+ mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 94%,transparent);
+ mask-composite:intersect;
+}
+
+/* A featured live show, followed by mixed-size photo collections. */
+.home-page #gallery{background:radial-gradient(ellipse at top left,#391b244d,transparent 55%),#090e13}
+#gallery .gallery-intro{max-width:340px;color:#d0d1d0}
+.gallery-feature{margin:0 0 54px}
+.gallery-feature .photo{display:block;width:100%;min-height:0;background:#111820;border:1px solid #ffffff1c}
+.gallery-feature .photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.gallery-feature .photo span{position:static;display:block;padding:19px 22px;background:#151c24;font-size:17px;line-height:1.5}
+.gallery-group{margin-top:46px}
+.gallery-group>h3{margin:0 0 24px;font:italic 32px Georgia,serif;color:var(--cream)}
+#gallery .gallery-grid{column-count:3;column-gap:22px}
+#gallery .gallery-grid .photo{margin-bottom:22px;border:1px solid #ffffff1c;border-radius:4px;background:#151c24;box-shadow:0 10px 24px #0003}
+#gallery .gallery-grid .photo span{background:#151c24;font-size:13px;padding:15px 16px;color:#eee}
+#gallery .photo:hover{border-color:#ed454a99}
+#gallery .photo:hover img{transform:scale(1.02)}
+.photo-navigation{display:flex;align-items:center;justify-content:center;gap:28px;padding:8px 0 4px}
+.photo-navigation[hidden]{display:none}
+.photo-navigation button{display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;border:1px solid #ffffff66;background:#ffffff0d;border-radius:50%;font-size:24px;color:#fff}
+.photo-navigation button:hover{background:#ed454a33;border-color:var(--gold)}
+.photo-navigation span{font-size:13px;color:#ddd;min-width:60px;text-align:center}
+#media-dialog #dialog-content img{max-height:65svh}
+@media(max-width:1000px){#gallery .gallery-grid{column-count:2}}
+@media(max-width:680px){#gallery .gallery-grid{column-count:2;column-gap:12px}#gallery .gallery-grid .photo{margin-bottom:12px}#gallery .gallery-grid .photo span{font-size:11px;padding:12px 10px}.gallery-group>h3{font-size:27px}.gallery-feature{margin-bottom:34px}.gallery-feature .photo span{font-size:15px;padding:15px}.gallery-group{margin-top:34px}}
+@media(max-width:360px){#gallery .gallery-grid{column-count:1}}
+
+/* Subdued red concert lights and haze frame the gallery photographs. */
+.home-page #gallery{
+ background-color:#090e13;
+ background-image:linear-gradient(180deg,#090e132e 0%,#090e133d 48%,#090e133d 100%),url('assets/gallery-concert-haze.webp');
+ background-position:center top,center top;
+ background-size:100% 100%,100% 100%;
+ background-repeat:no-repeat;
+ background-attachment:scroll;
+ position:relative;
+ isolation:isolate;
+}
+.home-page #gallery::before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(90deg,#3c10192b,transparent 20%,transparent 80%,#3c10192b);
+}
+@media(max-width:680px){.home-page #gallery{background-size:100% 100%,100% 100%;background-position:center top,center top}}
+
+/* A still concert stage frames the video collection with soft red light. */
+.videos-page .watch{
+ background-color:#080c10;
+ background-image:linear-gradient(90deg,#080c1038 0%,#080c10b8 28%,#080c10b8 72%,#080c1038 100%),url('assets/gallery-concert-haze.webp');
+ background-position:center top;
+ background-size:100% 100%;
+ background-repeat:no-repeat;
+ background-attachment:scroll;
+}
+.videos-page .watch p{color:#d0d1d0;text-shadow:0 1px 6px #000}
+.videos-page .watch .eyebrow,.videos-page .watch .get-into-it,.videos-page .video-library-heading{color:var(--gold)}
+.videos-page .video-card h3{color:var(--cream);text-shadow:0 2px 8px #000}
+.videos-page .video-player{background:#05080b;box-shadow:0 10px 30px #0006;border:1px solid #ffffff20}
+
+/* Warm evening celebration around a quiet, readable booking-page center. */
+body.booking-page{
+ background-color:#100c0d;
+ background-image:linear-gradient(90deg,#09090c45 0%,#09090cb3 32%,#09090cb3 68%,#09090c45 100%),linear-gradient(180deg,#08080b33,#08080b88),url('assets/booking-evening-dance-floor-v187.webp');
+ background-position:center top;
+ background-size:cover;
+ background-repeat:no-repeat;
+ background-attachment:scroll;
+}
+.booking-page .booking{background:none}
+.booking-page footer{background:transparent}
+.booking-page .booking p,.booking-page .booking .phone,.booking-page .booking .email{color:#fff;text-shadow:0 1px 6px #000}
+
+@media(max-width:680px){
+ body.booking-page{
+  background-image:linear-gradient(90deg,#09090c33 0%,#09090c99 32%,#09090c99 68%,#09090c33 100%),linear-gradient(180deg,#08080b22,#08080b88),url('assets/booking-evening-dance-floor-phone-v187.webp');
+ }
+}

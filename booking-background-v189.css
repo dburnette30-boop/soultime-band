@@ -1,0 +1,25 @@
+/* The booking invitation uses the same atmosphere in both entry points. */
+.home-page #booking,.booking-page .booking{
+ background-color:#100c0d;
+ background-image:linear-gradient(90deg,#09090c33,#09090c99 32%,#09090c99 68%,#09090c33),linear-gradient(180deg,#08080b22,#08080b66),url('assets/booking-evening-dance-floor-v187.webp');
+ background-position:center;
+ background-size:cover;
+ background-repeat:no-repeat;
+ background-attachment:scroll;
+}
+@media(max-width:680px){
+ .home-page #booking,.booking-page .booking{
+  background-image:linear-gradient(90deg,#09090c22,#09090c88 32%,#09090c88 68%,#09090c22),linear-gradient(180deg,#08080b11,#08080b55),url('assets/booking-evening-dance-floor-phone-v187.webp');
+ }
+}
+.home-page #booking p,.home-page #booking .phone,.home-page #booking .email{color:#fff;text-shadow:0 1px 6px #000}
+
+/* Restore the original graphic above the new dance-floor background. */
+.home-page #booking,.booking-page .booking{isolation:isolate}
+.home-page #booking::before,.booking-page .booking::before{
+ content:"";position:absolute;z-index:-1;pointer-events:none;
+ top:64px;left:50%;transform:translateX(-50%);
+ width:min(80%,480px);aspect-ratio:1;
+ background-image:linear-gradient(#111a1699,#111a16e6),url('assets/soultime-gallery-1402.jpeg');
+ background-size:contain;background-position:center;background-repeat:no-repeat;
+}

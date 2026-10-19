@@ -1,0 +1,8 @@
+/* Keep the dance-floor scene framed to the phone screen as the long form scrolls. */
+@media(max-width:680px){
+ .booking-page .booking-scene-image{position:fixed;inset:0;width:100%;height:100vh;height:100lvh}
+ .booking-page .booking-scene-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+ .booking-page .booking-scene::before{background:linear-gradient(90deg,#08080b12,#08080b40 35%,#08080b40 65%,#08080b12)}
+ .booking-page .booking-form{background:#100c0d80;border-color:#ffffff40;box-shadow:0 8px 32px #0002}
+ .booking-page .booking-fields input,.booking-page .booking-fields select,.booking-page .booking-fields textarea{background:#201b1de6}
+}

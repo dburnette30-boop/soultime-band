@@ -1,0 +1,15 @@
+/* Classic yellow 45-rpm insert rotates with the vinyl. */
+body.home-page #shows .record-label{position:relative;container-type:inline-size}
+body.home-page #shows .record-label-brand{
+ position:absolute;top:9%;left:0;width:100%;text-align:center;
+ font-size:clamp(10px,1.3vw,18px);font-size:11cqw;line-height:1;letter-spacing:1px;
+}
+body.home-page #shows .record-adapter{
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+ width:60%;height:60%;max-width:none;object-fit:contain;
+ filter:drop-shadow(1px 3px 2px #0008);
+}
+body.home-page #shows .record-label small{
+ position:absolute;bottom:10%;left:0;width:100%;margin:0;text-align:center;
+ font-size:clamp(4px,.45vw,6px);font-size:4cqw;letter-spacing:.5px;line-height:1;
+}

@@ -1,0 +1,12 @@
+/* One actual image spans the complete booking invitation and footer. */
+body.booking-page{background:#100c0d;min-height:100svh;display:flex;flex-direction:column}
+.booking-page main{flex:1;display:flex;flex-direction:column}
+.booking-scene{position:relative;isolation:isolate;overflow:hidden;background:#100c0d}
+.booking-page .booking-scene{flex:1;min-height:100svh;display:flex;flex-direction:column}
+.booking-scene-image{position:absolute;inset:0;display:block;z-index:-2;pointer-events:none}
+.booking-scene-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.booking-scene::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#08080b22,#08080b66 34%,#08080b66 66%,#08080b22)}
+.home-page .booking-scene #booking,.booking-page .booking-scene .booking,.booking-scene footer{background:transparent}
+.booking-page .booking-scene .booking{flex:1}
+.home-page #booking::before,.booking-page .booking::before{content:none}
+.booking-scene .booking p,.booking-scene .booking .phone,.booking-scene .booking .email{color:#fff;text-shadow:0 1px 6px #000}
