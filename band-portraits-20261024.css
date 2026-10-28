@@ -1,0 +1,9 @@
+/* Preserve the complete new portraits on desktop, tablet, and phone. */
+.home-page #members .member-grid > article > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
