@@ -31,3 +31,15 @@ body.home-page #shows .record-label::before{
  box-shadow:0 0 2px #0008;pointer-events:none;
 }
 body.home-page #shows .record-adapter{width:70%;height:70%}
+
+/* Derive both center dimensions from its width to prevent oval holes. */
+body.home-page #shows .record-label{
+ flex:0 0 40%;width:40%;height:auto;aspect-ratio:1/1;
+ border-radius:50%;
+}
+body.home-page #shows .record-label::before{
+ width:54%;height:auto;aspect-ratio:1/1;border-radius:50%;
+}
+body.home-page #shows .record-adapter{
+ width:54%;height:auto;aspect-ratio:1/1;
+}
