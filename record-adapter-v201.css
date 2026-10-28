@@ -13,3 +13,21 @@ body.home-page #shows .record-label small{
  position:absolute;bottom:10%;left:0;width:100%;margin:0;text-align:center;
  font-size:clamp(4px,.45vw,6px);font-size:4cqw;letter-spacing:.5px;line-height:1;
 }
+
+/* Keep the 45-rpm opening visible on phones, tablets, and desktops. */
+body.home-page #shows .record{position:relative;background:none;isolation:isolate}
+body.home-page #shows .record::before{
+ content:"";position:absolute;inset:0;border-radius:50%;z-index:-1;
+ background:repeating-radial-gradient(circle,#121612 0px,#121612 2px,#232b22 3px,#111611 4px);
+ -webkit-mask-image:radial-gradient(circle closest-side,transparent 21.4%,#000 21.8%);
+ mask-image:radial-gradient(circle closest-side,transparent 21.4%,#000 21.8%);
+}
+body.home-page #shows .record-label{
+ background:radial-gradient(circle closest-side,transparent 53.5%,var(--gold) 54.5%);
+}
+body.home-page #shows .record-label::before{
+ content:"";position:absolute;left:50%;top:50%;width:54%;height:54%;
+ transform:translate(-50%,-50%);border-radius:50%;border:1px solid #0009;
+ box-shadow:0 0 2px #0008;pointer-events:none;
+}
+body.home-page #shows .record-adapter{width:70%;height:70%}
