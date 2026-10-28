@@ -19,14 +19,14 @@ body.home-page #shows .record{position:relative;background:none;isolation:isolat
 body.home-page #shows .record::before{
  content:"";position:absolute;inset:0;border-radius:50%;z-index:-1;
  background:repeating-radial-gradient(circle,#121612 0px,#121612 2px,#232b22 3px,#111611 4px);
- -webkit-mask-image:radial-gradient(circle closest-side,transparent 21.4%,#000 21.8%);
- mask-image:radial-gradient(circle closest-side,transparent 21.4%,#000 21.8%);
+ -webkit-mask-image:radial-gradient(circle closest-side,transparent 18.1%,#000 18.3%);
+ mask-image:radial-gradient(circle closest-side,transparent 18.1%,#000 18.3%);
 }
 body.home-page #shows .record-label{
- background:radial-gradient(circle closest-side,transparent 53.5%,var(--gold) 54.5%);
+ background:radial-gradient(circle closest-side,transparent 45.3%,var(--gold) 45.7%);
 }
 body.home-page #shows .record-label::before{
- content:"";position:absolute;left:50%;top:50%;width:54%;height:54%;
+ content:"";position:absolute;left:50%;top:50%;width:45.5%;height:45.5%;
  transform:translate(-50%,-50%);border-radius:50%;border:1px solid #0009;
  box-shadow:0 0 2px #0008;pointer-events:none;
 }
@@ -38,7 +38,7 @@ body.home-page #shows .record-label{
  border-radius:50%;
 }
 body.home-page #shows .record-label::before{
- width:54%;height:auto;aspect-ratio:1/1;border-radius:50%;
+ width:45.5%;height:auto;aspect-ratio:1/1;border-radius:50%;
 }
 body.home-page #shows .record-adapter{
  width:54%;height:auto;aspect-ratio:1/1;
