@@ -312,7 +312,7 @@ body.home-page .hero:has(.hero-still.is-visible) .hero-shade{opacity:0}
  body.home-page .hero .opening-script{position:relative;top:8px;left:12px}
 }
 
-/* Restore softly faded stage drapes beside the complete opening band portrait. */
+/* Keep the portrait opaque over both outer arms; fade only the empty image edges. */
 body.home-page .hero > picture{
  position:absolute;inset:0 0 auto;height:56.25vw;z-index:0;pointer-events:none;
  background:linear-gradient(#03060dd6,#03060dd6),url('assets/continuous-curtain-v224.png') center/cover no-repeat;
@@ -323,8 +323,8 @@ body.home-page .hero > picture .hero-still{
  inset:0 auto auto 50%;width:auto;height:100%;max-width:100%;aspect-ratio:auto;
  transform:translateX(-50%);object-fit:contain;object-position:center;
  background:transparent!important;
- -webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)!important;
- mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)!important;
+ -webkit-mask-image:linear-gradient(to right,transparent,#000 .4%,#000 99.6%,transparent)!important;
+ mask-image:linear-gradient(to right,transparent,#000 .4%,#000 99.6%,transparent)!important;
 }
 @media(min-width:1001px) and (hover:hover) and (pointer:fine){
  body.home-page .hero > picture{height:var(--opening-media-height)}
