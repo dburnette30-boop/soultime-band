@@ -368,3 +368,6 @@ body.home-page .hero .hero-description{padding-bottom:44px}
 
 /* Match the music bar to the header buttons. */
 body.home-page .genre-strip{background:#bd202b;color:#fff}
+
+/* Keep the stage details inside the individual portraits only. */
+body.home-page #members{background:#101012 url('assets/band-bios-charcoal-smoke.webp') center/100% 100% no-repeat}

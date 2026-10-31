@@ -1,0 +1,5 @@
+/* Preserve the new background proportions on phone screens. */
+@media(max-width:680px){
+ body.home-page #members{background-size:100% auto;background-repeat:repeat-y;background-position:center top}
+ body.show-dates-page::before{background-size:cover;background-position:64% center}
+}

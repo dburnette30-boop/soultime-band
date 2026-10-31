@@ -32,3 +32,7 @@ body.home-page > header nav.open {gap:10px;}
   padding:11px 6px!important;
  }
 }
+
+/* Pill-shaped navigation; keep the booking button rectangular. */
+body > header nav a:not(.nav-book),
+body.home-page > header nav a:not(.nav-book){border-radius:999px}
