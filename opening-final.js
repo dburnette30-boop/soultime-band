@@ -59,7 +59,7 @@
     if (finished || starting || document.hidden || !video.paused) return;
     starting = true;
     try {
-      await backdropReady;
+      await Promise.race([backdropReady, new Promise(resolve => setTimeout(resolve, 1500))]);
       if (finished || document.hidden) return;
       if (desktopOpening) {
         await new Promise(requestAnimationFrame);
