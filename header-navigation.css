@@ -49,3 +49,6 @@ body.home-page > header nav a:not(.nav-book){border-radius:999px}
  body > header nav a,body.home-page > header nav a{min-height:44px;box-sizing:border-box}
  .video-library{grid-template-columns:minmax(0,1fr)}
 }
+
+html:has(body.home-page){scroll-padding-top:0}
+body.home-page #members{scroll-margin-top:0}
